@@ -1,5 +1,5 @@
 :root {
-    --color-main: #96cdb0;
+    --color-main: #203b37;
     --color-scondary: #5a8f76;
     --bg-body: white;
     --main-accent: #203b37;
@@ -116,9 +116,8 @@ body {
 
 .profile_icons {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    gap: 50px;
     margin-bottom: 2.5rem;
 }
 
@@ -264,11 +263,12 @@ header label {
     }  
 }
 
-/*APPLICATIONS SECTION */
-.applications {
+
+/*TRACKING TABLE */
+.tracking {
     margin-top: 50px;
 }
-.applications-table {
+.tracking-table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
@@ -278,23 +278,23 @@ header label {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.applications-table th, 
-.applications-table td {
+.tracking-table th, 
+.tracking-table td {
     padding: 12px;
     text-align: left;
     border-bottom: 1px solid #ddd;
 }
 
-.applications-table thead {
+.tracking-table thead {
     background: #5a8f76; 
 }
 
-.applications-table th {
+.tracking-table th {
     font-weight: bold;
     color: white;
 }
 
-.status {
+.status-dropdown {
     font-weight: bold;
     padding: 5px 10px;
     margin: 5px;
@@ -304,49 +304,30 @@ header label {
     height: 40px;
 }
 
-.status-dropdown {
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 14px;
-    background-color: #f9f9f9;
-}
-
-.details-link {
-    text-decoration: none;
-    color: #5a8f76;
-    font-weight: bold;
-}
-
-.details-link:hover {
-    text-decoration: underline;
-}
-
 @media screen and (max-width: 768px) {
-    .applications-table thead {
+    .tracking-table thead {
         display: none;
     }
 
-    .applications-table tbody, 
-    .applications-table tr, 
-    .applications-table td {
+    .tracking-table tbody, 
+    .tracking-table tr, 
+    .tracking-table td {
         display: block;
         width: 100%;
     }
 
-    .applications-table tr {
+    .tracking-table tr {
         margin-bottom: 10px;
         border-bottom: 2px solid #ddd;
     }
 
-    .applications-table td {
+    .tracking-table td {
         text-align: right;
         padding-left: 50%;
         position: relative;
     }
 
-    .applications-table td::before {
+    .tracking-table td::before {
         content: attr(data-label);
         position: absolute;
         left: 10px;

@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         row.style.backgroundColor = value === "approved" ? "#c6e6c1" :
                                     value === "pending" ? "#eee8b2" :
-                                    value === "rejected" ? "#c18d52" :
+                                    value === "rejected" ? "#f8b4b4" :
                                     "#b3d9ff"; // In-progress (default blue)
     }
 });

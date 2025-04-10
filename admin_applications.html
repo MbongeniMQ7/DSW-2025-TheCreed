@@ -7,7 +7,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css"
     />
-    <title>Applications</title>
+    <title>Admin</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -21,17 +21,16 @@
             style="background-image: url(images/user_img.jpeg)"
           ></div>
           <div class="profile_info">
-            <h2>Natalie Mashele</h2>
-            <small>Web Designer</small>
+            <h2 id="userName">Natalie Mashele</h2>
+            <small id="userPosition">Web Designer</small>
           </div>
           <div class="profile_action">
             <a href="" class="btn btn_white">
-              <span class="las la-coins"></span>
+              <span class="las la-coins" id="moneyAvail"></span>
               R2,300
             </a>
           </div>
           <div class="profile_icons">
-            <span class="las la-user"></span>
             <span class="las la-comment-alt"></span>
             <span class="las la-file-invoice"></span>
           </div>
@@ -50,9 +49,21 @@
               <span>Applications</span>
             </a>
           </div>
+          <!-- <div class="menu_item">
+            <a href="">
+              <span class="las la-signal"></span>
+              <span>Update Status</span>
+            </a>
+          </div> -->
+          <!-- <div class="menu_item">
+            <a href="">
+              <span class="las la-credit-card"></span>
+              <span>Payments</span>
+            </a>
+          </div> -->
           <div class="menu_item">
             <a href="admin_users.html">
-              <span class="las la-users-cog"></span>
+              <span class="las la-users"></span>
               <span>Users</span>
             </a>
           </div>
@@ -72,9 +83,9 @@
           </label>
 
           <div class="head_icons">
-            <span class="las la-search"></span>
-            <span class="las la-comment-alt"></span>
-            <span class="las la-bell"></span>
+            <span class="las la-search" id="search_btn"></span>
+            <span class="las la-comment-alt" id="comment_btn"></span>
+            <span class="las la-bell" id="notifications_btn"></span>
 
             <div class="avatar">
               <img src="images/Logo_DHA_wecare.png" alt="" />

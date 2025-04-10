@@ -7,8 +7,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css"
     />
-    <title>Admin</title>
-    <link rel="stylesheet" href="styles.css" />
+    <title>Super Admin</title>
+    <link rel="stylesheet" href="s_admin_styles.css" />
   </head>
   <body>
     <div class="page_wrapper">
@@ -39,39 +39,39 @@
 
         <div class="sidebar_menu">
           <div class="menu_item">
-            <a href="admin_dashboard.html">
+            <a href="s_admin_dashboard.html">
               <span class="las la-chart-line"></span>
               <span>Dashboard</span>
             </a>
           </div>
           <div class="menu_item">
-            <a href="admin_applications.html">
-              <span class="las la-columns"></span>
-              <span>Applications</span>
-            </a>
-          </div>
-          <!-- <div class="menu_item">
-            <a href="">
+            <a href="s_admin_status.html" class="active">
               <span class="las la-signal"></span>
               <span>Update Status</span>
             </a>
-          </div> -->
-          <!-- <div class="menu_item">
-            <a href="">
-              <span class="las la-credit-card"></span>
-              <span>Payments</span>
-            </a>
-          </div> -->
+          </div>
           <div class="menu_item">
-            <a href="" class="active">
-              <span class="las la-users"></span>
+            <a href="">
+              <span class="las la-users-cog"></span>
               <span>Users</span>
             </a>
           </div>
           <div class="menu_item">
-            <a href="admin_profile.html">
-              <span class="las la-user-ninja"></span>
-              <span>Profile</span>
+            <a href="">
+              <span class="las la-credit-card"></span>
+              <span>Payments</span>
+            </a>
+          </div>
+          <div class="menu_item">
+            <a href="">
+              <span class="las la-info"></span>
+              <span>Information</span>
+            </a>
+          </div>
+          <div class="menu_item">
+            <a href="">
+              <span class="las la-folder-open"></span>
+              <span>Reports</span>
             </a>
           </div>
         </div>
@@ -94,8 +94,44 @@
           </div>
         </header>
 
-        <main></main>
+        <main>
+          <h2>Manage Applications</h2>
+          <div class="tracking">
+            <table class="tracking-table">
+              <thead>
+                <tr>
+                  <th>Tracking ID</th>
+                  <th>Status</th>
+                  <th>Details</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="tracking-id">123456</td>
+                  <td>
+                    <select class="status-dropdown">
+                      <option value="Pending">Pending</option>
+                      <option value="Processing">Processing</option>
+                      <option value="Ready for Pickup">Ready for Pickup</option>
+                      <option value="In Transit to Pickup Point">
+                        In Transit to Pickup Point
+                      </option>
+                      <option value="Ready for Collection">
+                        Ready for Collection
+                      </option>
+                    </select>
+                  </td>
+                  <td><a href="#">View Details</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </main>
       </div>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+    <script src="s_admin_status.js"></script>
   </body>
 </html>
