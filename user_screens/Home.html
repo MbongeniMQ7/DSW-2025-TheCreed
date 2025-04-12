@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Department of Home Affairs</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css"
+    />
+    <link rel="stylesheet" href="Home.css">
+
+    <!-- Google Translate API -->
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <script>
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+          pageLanguage: 'en',  // Default language set to English
+          includedLanguages: 'af,en,zu,st,xh,ts,tn,ve,ss,ns',  // Languages you want to support
+          layout: google.translate.TranslateElement.InlineLayout.SIMPLE,  // Set dropdown layout
+          autoDisplay: false,  // Prevent auto-display of translation bar
+          gaTrack: true,  // Enable Google Analytics tracking (optional)
+          googleTranslationElementClass: 'google-translate-element'  // Custom class for styling
+        }, 'google_translate_element');
+      }
+
+      // Hide the Google Translate logo
+      document.addEventListener('DOMContentLoaded', function() {
+        const googleLogo = document.querySelector('.goog-logo-link');
+        if (googleLogo) googleLogo.style.display = 'none'; // Hide the Google Translate logo
+      });
+
+      // Optional: Store language selection in localStorage to keep it persistent across sessions
+      function setLanguage(lang) {
+        localStorage.setItem('language', lang);
+        window.location.reload();  // Reload the page to apply the selected language
+      }
+
+      // Set language based on localStorage on page load
+      window.onload = function() {
+        const savedLang = localStorage.getItem('language');
+        if (savedLang) {
+          document.documentElement.lang = savedLang;  // Apply saved language
+        }
+      };
+    </script>
+</head>
+<body>
+
+<div class="navbar">
+    <div class="logo">
+        <img src="images/Home Affairs Logo.png" alt="Logo">
+    </div>
+   
+    <div class="page-bg">
+        <img src="images/Coat of Arms.png" alt="Background Coat of Arms">
+    </div>
+
+    <div class="nav-buttons">
+        <a href="Home.html"><button>Home</button></a> 
+        
+        <div class="dropdown">
+            <button class="dropbtn">Services</button>
+            <div class="dropdown-content">
+                <a href="#">Marriage Certificate</a>
+                <a href="#">Birth Certificate</a>
+                <a href="#">Death Certificate</a>
+                <a href="#">Smart ID</a>
+                <a href="#">Passport</a>
+            </div>
+        </div>
+
+        <a href="about.html"><button>About Us</button></a> 
+        
+        <!-- The language dropdown will always be visible here -->
+        <div id="google_translate_element"></div>
+
+        <a href="login.html"><button>Login</button></a>
+        <button class="logout">Logout</button>
+    </div>
+</div>
+
+<h1>Welcome to the Department of Home Affairs</h1>
+<p>Providing essential civic services to all citizens. Apply for documents, track applications, and book appointments with ease.</p>
+
+</body>
+</html>

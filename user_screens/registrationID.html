@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ID Application - Department of Home Affairs</title>
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f6f8;
+      margin: 0;
+      padding: 0;
+    }
+    .navbar {
+      background-color: #004d40;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 30px;
+    }
+    .navbar .logo img {
+      height: 50px;
+    }
+    .nav-buttons button {
+      margin-left: 10px;
+      padding: 10px 20px;
+      background-color: #00796b;
+      border: none;
+      color: white;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .nav-buttons button:hover {
+      background-color: #004d40;
+    }
+    .container {
+      max-width: 700px;
+      margin: 40px auto;
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    form h1 {
+      text-align: center;
+      color: #004d40;
+    }
+    form span {
+      display: block;
+      text-align: center;
+      margin-bottom: 20px;
+      color: #666;
+    }
+    form input, form select {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    form label {
+      font-weight: bold;
+      margin-top: 10px;
+      display: block;
+    }
+    form button {
+      width: 100%;
+      padding: 12px;
+      background-color: #00796b;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    form button:hover {
+      background-color: #004d40;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="navbar">
+    <div class="logo">
+      <img src="images/Home Affairs Logo.png" alt="Home Affairs Logo">
+    </div>
+    <div class="nav-buttons">
+      <a href="#"><button>Home</button></a> 
+      <a href="#"><button>Services</button></a> 
+      <a href="#"><button>About Us</button></a> 
+      <a href="#"><button>Login</button></a>
+    </div>
+  </div>
+
+  <div class="container">
+    <form id="idApplicationForm">
+      <h1>Identity Document Application</h1>
+      <span>Please complete all required fields</span>
+
+      <input type="text" name="firstName" placeholder="First Name" required />
+      <input type="text" name="surname" placeholder="Surname" required />
+      <input type="date" name="dob" placeholder="Date of Birth" required />
+
+      <select name="gender" required>
+        <option value="">Select Gender</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        <option value="Other">Other</option>
+      </select>
+
+      <input type="text" name="nationality" placeholder="Nationality" required />
+      <input type="text" name="placeOfBirth" placeholder="Place of Birth" required />
+      <input type="text" name="homeAddress" placeholder="Home Address" required />
+      <input type="tel" name="phoneNumber" placeholder="Phone Number" required />
+      <input type="email" name="email" placeholder="Email Address" required />
+
+      <label for="birthCertificate">Upload Certified Copy of Birth Certificate:</label>
+      <input type="file" id="birthCertificate" name="birthCertificate" accept=".pdf,.jpg,.jpeg,.png" required />
+
+      <label for="photos">Upload Two Color ID Photographs:</label>
+      <input type="file" id="photos" name="photos" accept=".jpg,.jpeg,.png" multiple required />
+
+      <label for="fingerprints">Upload Fingerprint Form (DHA-9):</label>
+      <input type="file" id="fingerprints" name="fingerprints" accept=".pdf,.jpg,.jpeg,.png" required />
+
+      <button type="submit">Submit Application</button>
+    </form>
+  </div>
+
+</body>
+</html>

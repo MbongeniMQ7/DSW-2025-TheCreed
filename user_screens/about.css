@@ -1,0 +1,116 @@
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: white;
+    width: 1440px;
+}
+
+.navbar {
+    width: 1440px;
+    height: 60px;
+    background-color: #96cdb0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+}
+  
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.logo img {
+    height: 70px;
+}
+.logo span {
+    font-size: 20px;
+    font-weight: bold;
+    color: #004225;
+}
+.nav-buttons {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+.nav-buttons button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 8px 12px;
+    color: white;
+}
+.nav-buttons button:hover {
+    background-color: #5a8f76;
+    border-radius: 4px;
+}
+.dropdown {
+    position: relative;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 35px;
+    left: 0;
+    background: white;
+    border: 1px solid #ccc;
+    flex-direction: column;
+    width: 150px;
+    z-index: 1;
+}
+.dropdown-content button {
+    padding: 8px;
+    text-align: left;
+    border: none;
+    background: #5a8f76;
+    cursor: pointer;
+}
+.dropdown-content button:hover {
+    background-color: #203b37;
+}
+.dropdown:hover .dropdown-content {
+    display: flex;
+}
+.logout {
+    background-color: #FF914D;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+  
+.about-container {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 20px;
+    background:#5a8f76;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+.about-container h2 {
+    color: #004225;
+    margin-top: 20px;
+  }
+  
+  .about-container p, .about-container ul {
+    font-size: 16px;
+    color:white;
+    line-height: 1.6;
+  }
+
+
+.info-table, .info-table th, .info-table td {
+    border: 1px solid #000;
+    padding: 10px;
+    text-align: left;
+    color: white;
+}
+
+.info-table th {
+    background-color: #96cdb0;
+    color: #004225;
+
+}
